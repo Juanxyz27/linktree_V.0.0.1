@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Pixelify+Sans&family=Playpen+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    font-family: 'Playpen Sans', cursive;
+}
+
+.wrapper{
+    width: 100%;
+    text-align: center;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile img {
+    max-width: 100% ;
+    margin-top: 50px;
+    width: 125px;
+    height: 125px;
+    border-radius: 100%;
+    border: 5px solid white;
+}
+
+.profile p{
+    max-width: 450px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 25px;
+    
+}
+
+.box-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 10px rgba(128, 128, 128, 0.5), 0 0 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 50%;
+    height: 120px;
+    cursor: pointer;
+}
+
+.box .icon{
+    margin-bottom: 5px;
+}
+
+.box svg{
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+}
+
+.box a {
+    text-decoration: none;
+    color: #7752FE;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.box p {
+    margin: 10px 0;
+    font-size: 17px;
+    color: white;
+}
+
+footer{
+    text-align: center;
+    font-weight: 400;
+}
+
+footer span{
+    font-size: 20px;
+}
+
+
+/* image animation */
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+/* slector gambar */
+img.rotating{
+    animation: rotate 3s linear infinite;
+}
+
+/* audio stop image stop */
+audio:paused + .profile img.rotating{
+    animation-play-state: paused;
+}
+
+/* audio style  */
+audio{
+    margin-top: 15px;
+    border: none;
+    padding: 0;
+    
+}
+
+/* rgb love*/
+@keyframes rainbow{
+    0%      {color: red;}
+    14%     {color: orange;}
+    28%     {color: yellow;}
+    42%     {color: green;}
+    57%     {color: blue;}
+    71%     {color: indigo;}
+    85%     {color: violet;}
+    100%    {color: red;}
+}
+
+span{
+    animation: rainbow 5s linear infinite;
+}
